@@ -1,6 +1,7 @@
 % OverDrive pitch
 
 \documentclass[aspectratio=169]{beamer}
+\usepackage[export]{adjustbox}
 \usetheme{metropolis}           % Use metropolis theme
 \title{OverDrive - A Hardware Secure USB Drive}
 \date{\today}
@@ -14,65 +15,54 @@
 \begin{frame}{Motivation}
 \begin{itemize}
 \item \textbf{Problem:}
-	Journalist doing important work in dangerous countries risk indictment if their work is 
-    discovered. Typically they will use an operating system called Tails, which resides on
-    a USB drive. If this drive falls into the authorities hands, they may be declared guilty
-    by possession.
+    Journalist working in dangerous countries risk indictment if their work is
+    discovered. Commonly they will use live operating system residing on a USB
+    drive. If this drive falls into the authorities hands, they may be declared
+    guilty by possession.
 
 \item \textbf{Existing Solution:}
-   It's possible to encrypt the drive, or use a drive which require a hardware password.
-   However both techniques look suspicious.
+   It's possible or use a drive which requires a hardware password, however this
+   may look suspicious.
 
 \item \textbf{Our Solution:}
-    Overdrive aims to be as discreet as possible. When the user inserts the drive using a specific
-    technique, the hardware will expose a second partition. If not, it will expose it's first
-    partition. It looks just like an ordinary drive.
+    Overdrive aims to be as discreet as possible, there is a certain technique
+    required to expose a hidden partition.
 \end{itemize}
 \end{frame}
-
-\end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Overview}
-\begin{itemize}
-\item \textbf{What it is.}\\
-BirdEar is a low cost, battery powered device designed to monitor local bird activity. 
+    \begin{figure}
+        \includegraphics[scale=0.4]{tails.pdf}
+    \end{figure}
 
-\item \textbf{How it works.}\\
-BirdEar is equipped with sensors, microphone and a microcontroller.
-The device determines the species of the bird from the call using an embedded machine learning algorithm. 
-\end{itemize}
+    When working on stories abroad, journalists will commonly use the Tails
+    operation system. Tails is privacy focused and does not hold persistent data
+    like a traditional OS. Tails resides on a USB drive and is live booted.
+
+    It is possible to hold encrypted persistent data, but only if it's
+    encrypted. All networking is routed thought TOR (The Onion Router), which is
+    an anonymous way to browse the internet.
+
+    Overdrive is custom USB drive that will hide the partition tails is on.
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Using BirdEar}
-\begin{itemize}
-\item \textbf{How to use it.}\\
-The device is designed to be attached to a tree and may be left in place for several weeks before having to change the battery.
+\begin{frame}{Device Use}
+When overdrive is inserted into a computer normally, the device will show as a
+normal drive, this can be used to hold non incriminating information.
 
-\item \textbf{What you get.}\\	
-Upon retrieval, the user can expect to see a timestamp, bird species, and any additional sensor data collected over the deployment of the device. 
-\end{itemize}
+However, if the drive is inserted into a computer and the outside is held for
+five seconds, the second hidden partition will show up.
+
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Final Remarks}
-	Hopefully, BirdEar will serve as a valuable tool for studying birds. % fix?
-
-	Thank you for your time!
+\begin{frame}{Overview}
 \end{frame}
+
 \end{document}
-
-% Questions
-% ---------
-% 1) As is, would this be a useful tool?
-% 2) (Page 1) Can you think of any additional applications? Are the listed applications relevant?
-% 3) Does anything like this exist currently? If so, what are the shortcomings? What is the price point?
-% 4) What would an ideal battery life be?
-% 5) Any additional sensors?
-% 6) Any remarks or additional features?
