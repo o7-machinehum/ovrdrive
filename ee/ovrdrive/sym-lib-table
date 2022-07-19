@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "JDEC_FLASH")(type "KiCad")(uri "${KIPRJMOD}/../lib/jdec_flash.kicad_sym")(options "")(descr ""))
+  (lib (name "sm3257en")(type "KiCad")(uri "/home/machinehum/projects/il03-ovrdrive/ee/lib/sm3257en.kicad_sym")(options "")(descr ""))
+)
