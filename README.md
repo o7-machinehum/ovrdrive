@@ -29,4 +29,4 @@ http://www.pc-3000flash.com/solbase/index.php?lang=eng
 - SM3257EN
     - The TQFP and LQFP are almost identical, just the height.
     - Complete Part Number SM3257ENTxxx
-
+- ATTINY24A-CCUR
