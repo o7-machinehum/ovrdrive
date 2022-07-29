@@ -1,4 +1,4 @@
-# usb-drive
+# Ovrdrive
 The one and only, exploding USB drive. 
 ![](img/drive.png)
 
