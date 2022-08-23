@@ -87,7 +87,7 @@ version:
 	@$(COMPILER) --version
 	@echo =================
 
-flash:
+flash: build
 	@echo =====Programming Board=====
 	avrdude -p $(MCU_TARGET) -c $(DFU) -e -U flash:w:$(TARGET).elf
 	@echo =====Programming Done=====
