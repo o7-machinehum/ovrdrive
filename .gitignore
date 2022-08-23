@@ -3,3 +3,5 @@ ee/datasheets/rushing/*
 
 ovrdrive.elf
 ovrdrive.hex
+fw/cscope.out
+ee/ovrdrive/ovrdrive-backups/
