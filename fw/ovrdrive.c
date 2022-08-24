@@ -25,9 +25,7 @@ void init_adc() {
     ADMUX &= ~(1 << REFS1);
     ADMUX |= (1 << MUX0);   // Use ADC1 (PA1)
     ADCSRB |= (1 << ADLAR); // Left adjusted (8bit) operation alright
-
     ADCSRA |= (1 << ADEN);  // Enable ADC
-
 }
 
 float read_adc() {
