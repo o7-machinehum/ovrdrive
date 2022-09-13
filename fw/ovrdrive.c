@@ -1,12 +1,11 @@
 #include <avr/io.h>
-#include <util/delay.h>
 
 // PWM PA6
 // ADC PA1
 // LED PA2
 
 const float R2 = 747e3; // R2 in schematic
-const float Rth = 1e6;  // If r > 1Mohm, finger not wet.
+const float Rth = 0.4e6;  // If r > 1Mohm, finger not wet.
 
 void init_pwm() {
    DDRA |= (1 << PA6);                    // PA6 as output
@@ -38,19 +37,19 @@ float read_adc() {
 }
 
 int main(void) {
-	DDRA = 1 << PA2; // LED
+    DDRA = 1 << PA2; // LED
 
     init_pwm();
     init_adc();
 
-	while(1)
-	{
+    while(1)
+    {
         float v, r = 0;
 
         v = read_adc();
         set_pwm(v);
         r = v * (R2/2.5);
 
-		(r > Rth) ? (PORTA &= ~(1 << PA2)) : (PORTA |= 1 << PA2);
-	}
+        (r > Rth) ? (PORTA &= ~(1 << PA2)) : (PORTA |= 1 << PA2);
+    }
 }

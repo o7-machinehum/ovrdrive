@@ -11,3 +11,5 @@ ATTINY24-20PU  - DIP version
 ## Links and Notes
 https://www.usbdev.ru/articles/testmod/
 https://www.usbdev.ru/files/smi/
+https://www.elinfor.com/knowledge/practical-guide-for-flash-memory-p-10889
+    -> This looks like a good guide.
