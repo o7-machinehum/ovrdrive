@@ -94,7 +94,7 @@ flash: build
 
 fuse:
 	# -avrdude -p $(MCU_TARGET) -c $(DFU) -U lfuse:w:0xa4:m -U hfuse:w:0xd8:m
-	-avrdude -p $(MCU_TARGET) -c $(DFU) -U -F lfuse:w:0xe2:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m
+	-avrdude -p $(MCU_TARGET) -c $(DFU) -U lfuse:w:0xe2:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m
 
 clean:
 	@echo =====Cleaning=====
