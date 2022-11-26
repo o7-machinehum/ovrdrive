@@ -1,0 +1,21 @@
+Circuit: * C:\users\machinehum\Desktop\projects\ovrdrive\ee\sims\Draft1.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Mon Oct 10 17:19:28 2022
+Total elapsed time: 0.143 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2085
+traniter = 2082
+tranpoints = 1042
+accept = 1042
+rejected = 0
+matrix size = 1
+fillins = 0
+solver = Normal
+Matrix Compiler1: off  0.1/0.1/[0.1]
+Matrix Compiler2:       4 opcodes  0.1/[0.1]/0.2
+
