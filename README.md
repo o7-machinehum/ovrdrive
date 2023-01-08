@@ -10,12 +10,6 @@ Ovrdrive is a purpose built security focused usb drive. If the user doesn't lick
   - SM3255AA        - What dmesg thinks the chip is
   - SM3257EN        - Part number on the chip
 
-## Links and Notes
-https://www.usbdev.ru/articles/testmod/
-https://www.usbdev.ru/files/smi/
-https://www.elinfor.com/knowledge/practical-guide-for-flash-memory-p-10889
-https://flashboot.ru/files/file/243/
-
 ## SMI Mass QC tool
 Settings Password: 320
 Debug Password: 1111
@@ -24,6 +18,8 @@ Debug Password: 1111
   - [Russian Site 1](https://www.usbdev.ru/articles/testmod/)
   - [Russian Site 2](https://www.usbdev.ru/files/smi/)
   - [SMI MP Tool](https://www.usbdev.ru/files/smi/smimptool/)
+  - [Notes on Flash](https://www.elinfor.com/knowledge/practical-guide-for-flash-memory-p-10889)
+  - [SMI MP Tool 2](https://flashboot.ru/files/file/243/)
 
 ## Content
  - [First Blog Post](https://interruptlabs.ca/2022/07/29/I-m-Building-a-Self-Destructing-USB-Drive/)
