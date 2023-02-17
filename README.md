@@ -14,6 +14,15 @@ Ovrdrive is a purpose built security focused usb drive. If the user doesn't lick
   - K9gag08u0e-Scb0 - NAND Flash
   - SM3255AA        - What dmesg thinks the chip is
   - SM3257EN        - Part number on the chip
+  - SM3257ENAA      - Reported by SMI Mass Production Tool
+  - 838-22-004-10-001101
+
+## Notes
+```
+[machinehum@whitebox Star_SM3257ENAA_N0726]$ find . -iname "SM3257ENAA*.FFW"
+./UFD_ALL_ForceFW/SM3257ENAA.FFW
+```
+This is the "ISP" or firmware, source: https://www.usbdev.ru/articles/a_smi/ispcantbefound/
 
 ## SMI Mass QC tool
 Settings Password: 320
@@ -25,3 +34,8 @@ Debug Password: 1111
   - [SMI MP Tool](https://www.usbdev.ru/files/smi/smimptool/)
   - [Notes on Flash](https://www.elinfor.com/knowledge/practical-guide-for-flash-memory-p-10889)
   - [SMI MP Tool 2](https://flashboot.ru/files/file/243/)
+  - [ST's Part](https://www.st.com/en/microcontrollers-microprocessors/st72681.html)
+
+I'm developing a flash drive using the SM3257EN flash drive controller and the K9gag08u0e NAND flash. I've built up the boards. The device is enumerating but not showing up as a block device. I can access the device using the  "SMI Mass QC Tool". I think I need to program the SM3257EN with some information about the flash memory, but I'm a bit lost. As you guys have recovered several flash drives, I thought you might have some ideas.
+
+Here is the project: https://github.com/o7-machinehum/ovrdrive it has also been in the media https://tinyurl.com/4f3wen3u
