@@ -1,0 +1,38 @@
+### Footprint positions - created on Thu 23 Mar 2023 06:46:05 PM PDT ###
+### Printed by KiCad version (7.0.0)
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                           Package                                       PosX       PosY       Rot  Side
+C4        1uF                           C_0603_1608Metric                         117.9250  -106.8000  180.0000  top
+C5        4.7uF                         C_0603_1608Metric                         133.8000  -108.1000  -90.0000  top
+C6        4.7uF                         C_0603_1608Metric                         135.3000  -107.4000  -90.0000  top
+C7        4.7uF                         C_0603_1608Metric                         132.0000   -97.4000    0.0000  top
+C8        1uF                           C_0603_1608Metric                         127.5000  -109.3000  180.0000  top
+C9        1uF                           C_0603_1608Metric                         136.8000  -106.6000  -90.0000  top
+C10       1uF                           C_0603_1608Metric                         123.3000  -104.3000  -90.0000  top
+C11       1uF                           C_0603_1608Metric                         123.3000  -101.3000   90.0000  top
+C12       1uF                           C_0603_1608Metric                         130.5000  -109.3000    0.0000  top
+C13       1uF                           C_0603_1608Metric                         136.0000  -101.2000    0.0000  top
+C17       1uF                           C_0603_1608Metric                         128.9000   -97.4000  180.0000  top
+C18       100nF                         C_0603_1608Metric                         119.8000   -97.7000  180.0000  top
+D1        LED                           LED_0603_1608Metric                       117.4500   -98.4000  -90.0000  top
+J1        USB_A                         USB_A_CNCTech_1001-011-01101_Horizontal   149.0000  -104.2000    0.0000  top
+J3        Conn_02x03_Counter_Clockwise  PinHeader_2x03_P1.27mm_Horizontal         112.0700  -107.8000  180.0000  top
+Q1        SSM3J328R,LF                  SOT-23                                    120.5625  -109.5500  180.0000  top
+R1        1k                            R_0402_1005Metric                         115.1000  -102.4000  -90.0000  top
+R2        10k                           R_0402_1005Metric                         114.8000  -109.3000   90.0000  top
+R3        2.2R                          R_0603_1608Metric                         136.0000  -104.2000  180.0000  top
+R4        2.2R                          R_0603_1608Metric                         136.0000  -102.7000  180.0000  top
+R5        2.2R                          R_0603_1608Metric                         138.2250   -98.8000  180.0000  top
+R6        1k                            R_0603_1608Metric                         128.4000  -110.8000  180.0000  top
+R7        10k                           R_0402_1005Metric                         114.9250  -104.4000   90.0000  top
+R8        10k                           R_0402_1005Metric                         113.9250  -104.4000  -90.0000  top
+R9        1k                            R_0402_1005Metric                         115.9000   -98.4000   90.0000  top
+R10       680R                          R_0603_1608Metric                         134.6000   -98.4000  -90.0000  top
+R12       1k                            R_0402_1005Metric                         123.0525  -109.4900   90.0000  top
+R13       1R                            R_0603_1608Metric                         116.9000  -110.0000    0.0000  top
+TH1       10k                           R_0603_1608Metric                         116.9000  -108.5000  180.0000  top
+U1        SM3257ENT                     TQFP-48_7x7mm_P0.5mm                      129.3000  -103.4000  -90.0000  top
+U3        ATtiny24A-MM                  QFN-20-1EP_3x3mm_P0.45mm_EP1.6x1.6mm      117.8250  -103.9000    0.0000  top
+U4        74AUC1G32                     SOT-353_SC-70-5                           119.8000   -99.9000    0.0000  top
+## End
