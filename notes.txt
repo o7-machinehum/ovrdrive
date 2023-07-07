@@ -1,33 +1,12 @@
 # Notes
-- K9HDG08U1A (ECDED57A - From Chip Genious) (ECDED57A 5843 - From usbflashinfo)
-    - Populated flash on v2
-
-# Dyna
-./external/dyn/
-- [ ] K0324
-- [ ] K0608
-- [ ] K1012
-- [ ] K1028
-- [ ] L0328
-- [x] M0324
-    - Works with v1
-- [ ] M0531
-- [ ] M0710
-- [ ] M0906
-- [ ] M1014
-- [ ] M1025
-- [ ] M1102
-- [x] N0726
-    - "Controller .dbf Not Support"
-
-Beta_SMI_UFDMP_M1014.rar
+- K9GAG08U0E (Populated flash on V1)
+- K9HDG08U1A (Populated flash on V2)
+- SM3257ENQAA (Populated controller on V1)
+- SM3257ENQBA (Populated controller on V2)
 
 # Debugging
 All files in ee/debug_v2/
 All using "Star_SM3257ENAA_M1102"
-
-- "New SM3257": Once that shipped with V2 board
-- "Old SM3257": Once that shipped with V1 board
 
 no-flash.png
     - New SM3257, no flash populated
@@ -58,3 +37,9 @@ old-flash.png
     - If this doesn't work, replace the flash.
     - Test destruction circuit.
 
+# Boards (V2)
+    1) Hacked to try to make flash work. Probably NFG.
+    2) Replaced flash to K9GAG08U0E. Removed: Q2 and C1. Not enumerating through dmesg. 
+    3) 
+    4-9) Not touched
+    10) Sent to Crowdsupply
