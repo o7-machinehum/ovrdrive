@@ -1,0 +1,26 @@
+All using "Star_SM3257ENAA_M1102"
+
+- "New SM3257": Once that shipped with V2 board
+- "Old SM3257": Once that shipped with V1 board
+
+no-flash.png
+    - New SM3257, no flash populated
+
+old-flash-debug-read-flash-id.png
+old-flash-fail.png
+old-flash.png
+    - All with the old flash memory
+
+# Steps
+    - Started hacking one of the drives connecting different power rails.
+        - Didn't do anything
+    - Populated a V2 board with old flash
+        - Results the exact same as with New flash
+    - Populated a V1 board (blown up one) with Old SM3257
+        - This started working
+        - old-flash-old-SM3257.png
+        - old-flash-old-SM3257-debug.png
+        - Was able to provision normally
+    - Populated a V2 board (16Gb) with old SM3257
+        - This did not work
+

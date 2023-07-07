@@ -1,0 +1,60 @@
+# Notes
+- K9HDG08U1A (ECDED57A - From Chip Genious) (ECDED57A 5843 - From usbflashinfo)
+    - Populated flash on v2
+
+# Dyna
+./external/dyn/
+- [ ] K0324
+- [ ] K0608
+- [ ] K1012
+- [ ] K1028
+- [ ] L0328
+- [x] M0324
+    - Works with v1
+- [ ] M0531
+- [ ] M0710
+- [ ] M0906
+- [ ] M1014
+- [ ] M1025
+- [ ] M1102
+- [x] N0726
+    - "Controller .dbf Not Support"
+
+Beta_SMI_UFDMP_M1014.rar
+
+# Debugging
+All files in ee/debug_v2/
+All using "Star_SM3257ENAA_M1102"
+
+- "New SM3257": Once that shipped with V2 board
+- "Old SM3257": Once that shipped with V1 board
+
+no-flash.png
+    - New SM3257, no flash populated
+
+old-flash-debug-read-flash-id.png
+old-flash-fail.png
+old-flash.png
+    - All with the old flash memory
+
+# Steps
+    - Started hacking one of the drives connecting different power rails.
+        - Didn't do anything
+    - Populated a V2 board with old flash
+        - Results the exact same as with New flash
+    - Populated a V1 board (blown up one) with Old SM3257
+        - This started working
+        - old-flash-old-SM3257.png
+        - old-flash-old-SM3257-debug.png
+        - Was able to provision normally
+    - Populated a V2 board (16Gb) with old SM3257
+        - This did not work
+    - Used SM3257ENBA_N0528v1 to flash new SM3257, old Flash
+        - This worked!
+
+# Next Steps
+    - Seems as though there are issues with the new flash and SM3257.
+    - Start by replacing the SM3257. Test with this.
+    - If this doesn't work, replace the flash.
+    - Test destruction circuit.
+

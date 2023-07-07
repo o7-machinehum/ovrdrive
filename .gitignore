@@ -5,3 +5,13 @@ ovrdrive.elf
 ovrdrive.hex
 fw/cscope.out
 ee/ovrdrive/ovrdrive-backups/
+
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.hex
+*.elf
+
