@@ -35,7 +35,3 @@ Debug Password: 1111
   - [Notes on Flash](https://www.elinfor.com/knowledge/practical-guide-for-flash-memory-p-10889)
   - [SMI MP Tool 2](https://flashboot.ru/files/file/243/)
   - [ST's Part](https://www.st.com/en/microcontrollers-microprocessors/st72681.html)
-
-I'm developing a flash drive using the SM3257EN flash drive controller and the K9gag08u0e NAND flash. I've built up the boards. The device is enumerating but not showing up as a block device. I can access the device using the  "SMI Mass QC Tool". I think I need to program the SM3257EN with some information about the flash memory, but I'm a bit lost. As you guys have recovered several flash drives, I thought you might have some ideas.
-
-Here is the project: https://github.com/o7-machinehum/ovrdrive it has also been in the media https://tinyurl.com/4f3wen3u
