@@ -14,4 +14,5 @@ ee/ovrdrive/ovrdrive-backups/
 *.toc
 *.hex
 *.elf
+*.lck
 

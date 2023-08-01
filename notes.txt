@@ -1,6 +1,20 @@
 # Notes
-- K9GAG08U0E (Populated flash on V1)
-- K9HDG08U1A (Populated flash on V2)
+- K9GAG08U0E-SCB0 (Populated flash on V1)
+- K9HDG08U1A-SCB0 (Populated flash on V2)
+- MT29F64G08CBABAWP (Working flash)
+
+Possible Replacements
+     Space
+     ||
+- K9HDG08U5A-SCB0 (4CE, 16GB)
+- K9LCG08U1A-SCB0 (2CE, 8GB)
+- K9GCGD8UOA-SCB0 (1CE, 8GB)
+- K9GCGD8U0M-SCB0 (2CE, 8GB)
+- K9GCGD8U0C-SCB0 (1CE, 8GB)
+- K9GCGD8U0A-SCB0 (2CE, 8GB)
+
+
+
 - SM3257ENQAA (Populated controller on V1)
 - SM3257ENQBA (Populated controller on V2)
 
@@ -32,14 +46,19 @@ old-flash.png
         - This worked!
 
 # Next Steps
-    - Seems as though there are issues with the new flash and SM3257.
-    - Start by replacing the SM3257. Test with this.
-    - If this doesn't work, replace the flash.
-    - Test destruction circuit.
+    - Flash isn't getting destroyed
+        - Q2 Rds too high?
+            - Measure voltage above and below the FET
+        - TVS diode in flash
+        -
+
 
 # Boards (V2)
     1) Hacked to try to make flash work. Probably NFG.
-    2) Replaced flash to K9GAG08U0E. Removed: Q2 and C1. Not enumerating through dmesg. 
-    3) 
+    2) Replaced flash to K9GAG08U0E. Removed: Q2 and C1. Not enumerating through dmesg.
+    3) Populated with MT29F64G08CBABAWP
+        - Works!
     4-9) Not touched
     10) Sent to Crowdsupply
+
+
