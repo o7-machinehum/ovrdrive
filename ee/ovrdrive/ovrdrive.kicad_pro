@@ -452,7 +452,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "out/R0.1/ovrdrive.step",
+      "step": "out/R0.3/ovrdrive.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -491,7 +491,7 @@
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
-    "plot_directory": "out/R0.2/",
+    "plot_directory": "out/R0.3/",
     "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
