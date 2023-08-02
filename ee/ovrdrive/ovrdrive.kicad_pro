@@ -56,7 +56,24 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|121869999|107360155|95e2872a-3f1b-4388-a2ac-5ca4f0b07034|d770d4be-cba1-4159-8c31-39b7e513b613",
+        "courtyards_overlap|127800001|107800001|43ae2864-09ab-4487-925b-9c13d1865562|9cc0ccd4-2897-4972-9a40-762440729c24",
+        "silk_edge_clearance|107856561|105000000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|e14b7caa-f359-44a3-9116-b54c989499e8",
+        "silk_edge_clearance|107965260|105520000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|06f481f3-4208-4d2f-bb18-b4306ede24af",
+        "silk_edge_clearance|108187591|106270000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|d9cd8e50-cb25-4124-84db-e53a4aa602fd",
+        "silk_edge_clearance|108390473|106790000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|28063902-82b2-488f-8758-7df8a91c6422",
+        "silk_edge_clearance|108761315|107540000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|37189607-7d28-4db4-974e-942b72197882",
+        "silk_edge_clearance|108818401|107640000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|1e086033-162f-453f-80c4-764c9ae483fd",
+        "silk_edge_clearance|108889459|107760000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|50124944-bfab-45ff-8567-51e14ace777f",
+        "silk_edge_clearance|108963388|107880000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|cc3e3007-d4f2-4bb9-bf3a-1ef9bd360ebb",
+        "silk_edge_clearance|109040282|108000000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|bd4868a7-0596-4aba-b158-77a5c3422857",
+        "silk_edge_clearance|109079874|108060000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|4e849ab8-e639-4d09-9eb8-74d5b50d7459",
+        "silk_edge_clearance|109240000|108291388|41afbc03-c52f-4675-b18e-a7b9ecb6c610|ac4df63b-f96c-4428-9995-beb7926e2302",
+        "silk_edge_clearance|109391216|108495000|41afbc03-c52f-4675-b18e-a7b9ecb6c610|2d06960e-7d4b-4c03-b15b-eaf960fa2641",
+        "silk_edge_clearance|144434463|110345000|aef7c915-67a3-4e5e-9d5c-9cc889dee81a|c35617af-48dd-45b0-8e8e-03fadccc1d1a",
+        "silk_edge_clearance|144434463|98055000|aef7c915-67a3-4e5e-9d5c-9cc889dee81a|2e12ae32-fc14-48d8-a1da-b6c3a0c0c870"
+      ],
       "meta": {
         "version": 2
       },
