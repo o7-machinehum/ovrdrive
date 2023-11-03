@@ -1,0 +1,25 @@
+Source:,/home/machinehum/projects/ovrdrive/ee/ovrdrive/ovrdrive.kicad_sch,,,,,,,,,,,
+Date:,Mon 16 Oct 2023 04:32:02 PM PDT,,,,,,,,,,,
+Tool:,Eeschema 7.0.7,,,,,,,,,,,
+Generator:,/usr/bin/kicad-vault,,,,,,,,,,,
+Component Count:,40,,,,,,,,,,,
+Ref,Qnty,Qnty (exd),Value,Footprint,Part Number,Detailed Description,QTD Available,Price (QTD 1),Price (QTD 10),Price (QTD 100),Price (QTD 500),Price (QTD 1000)
+"C1, C15, C16, C18, ",4,20,100nF,Capacitor_SMD:C_0603_1608Metric,CC0603KRX7R7BB104,0.1 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric),12456616,0.1,0.044,0.0195,0.01392,0.01094
+"C2, C3, C4, C8, C9, C10, C11, C12, C13, C14, C17, ",11,55,1uF,Capacitor_SMD:C_0603_1608Metric,CC0603KRX7R7BB105,1 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric),9885572,0.14,0.098,0.0461,0.03234,0.02678
+"C5, C6, C7, ",3,15,4.7uF,Capacitor_SMD:C_0603_1608Metric,CL10A475KP8NNNC,4.7 µF ±10% 10V Ceramic Capacitor X5R 0603 (1608 Metric),4586296,0.1,0.043,0.0192,0.01368,0.01075
+"D1, ",1,5,LED,LED_SMD:LED_0603_1608Metric,XZMG53W-1,Green 568nm LED Indication - Discrete 2.2V 0603 (1608 Metric),97103,0.38,0.205,0.0952,0.08788,0.06883
+"D2, D3, ",2,10,BAS70LP-7B,Diode_SMD:D_0402_1005Metric,BAS70LP-7B,Diode 70 V 70mA Surface Mount X1-DFN1006-2,753230,0.36,0.251,0.1267,0.10332,0.07666
+"J1, ",1,5,USB_A,Connector_USB:USB_A_CNCTech_1001-011-01101_Horizontal,480372200,"USB-A (USB TYPE-A) USB 2.0 Plug Connector 4 Position Surface Mount, Right Angle; Through Hole",35225,1.45,1.199,0.9993,0.10332,0.07666
+"J3, ",1,5,AVR-ISP-6,Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Horizontal,20021112-00006T4LF,"Connector Header Through Hole, Right Angle 6 position 0.050"" (1.27mm)",3021,0.55,0.482,0.3972,0.34542,0.28497
+"R1, R2, ",2,10,1M,Resistor_SMD:R_0402_1005Metric,RC0402FR-071ML,"1 MOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Moisture Resistant Thick Film",2757114,0.1,0.014,0.007,0.00464,0.00396
+"R3, R4, R5, ",3,15,2.2R,Resistor_SMD:R_0603_1608Metric,RC0603FR-072R2L,"2.2 Ohms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film",422328,0.1,0.028,0.015,0.0104,0.00901
+"R6, ",1,5,1k,Resistor_SMD:R_0603_1608Metric,RC0603FR-071KL,"1 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film",18760041,0.1,0.018,0.0088,0.00592,0.00505
+"R7, R8, ",2,10,10k,Resistor_SMD:R_0402_1005Metric,RC0402FR-0710KL,"10 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Moisture Resistant Thick Film",1915170,0.1,0.014,0.007,0.00464,0.00396
+"R9, ",1,5,1k,Resistor_SMD:R_0402_1005Metric,RC0402FR-071KL,"1 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Moisture Resistant Thick Film",22379247,0.1,0.014,0.007,0.00464,0.00396
+"R10, ",1,5,680R,Resistor_SMD:R_0603_1608Metric,RC0603FR-07680RL,"680 Ohms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film",709868,0.1,0.018,0.0088,0.00592,0.00505
+"R14, R15, ",2,10,10k,Resistor_SMD:R_0603_1608Metric,RC0402FR-0710KL,"10 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Moisture Resistant Thick Film",1915170,0.1,0.014,0.007,0.00464,0.00396
+"U1, ",1,5,SM3257ENT,Package_QFP:TQFP-48_7x7mm_P0.5mm,SM3257ENT,,,,,,,
+"U2, ",1,5,FLASH,TSOP48:tsop48,K9HDG08U1A,,,,,,,
+"U3, ",1,5,ATtiny24A-MM,Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.45mm_EP1.6x1.6mm,ATTINY24A-MMHR,AVR AVR® ATtiny Microcontroller IC 8-Bit 20MHz 2KB (1K x 16) FLASH 20-VQFN (3x3),20002,1.08,0.014,0.9,0.00464,0.00396
+"U4, ",1,5,SN74LVC1G32DCKR,Package_TO_SOT_SMD:SOT-353_SC-70-5,SN74LVC1G32DCKR,OR Gate IC 1 Channel SC-70-5,61784,0.33,0.271,0.1439,0.09468,0.06439
+"U5, ",1,5,DRV8837C,Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm,DRV8837CDSGR,Motor Driver NMOS PWM 8-WSON (2x2),16922,0.89,0.781,0.599,0.47348,0.37879
