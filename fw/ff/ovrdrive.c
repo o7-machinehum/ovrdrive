@@ -3,71 +3,88 @@
 #include <stdbool.h>
 #include "ovrdrive.h"
 
-// #define INHIBIT
-#define DESTROY
-
-#define DWELL_TIME_US 50
-#define CHARGE_TIME_MS 125
-
-void pump(int charge_time) {
-    while(charge_time--) {
-        PORT_CP |= (1 << PIN_CP);
-        _delay_us(500);
-        PORT_CP &= ~(1 << PIN_CP);
-        _delay_us(500);
-    }
-
-    PORT_KILL |= (1 << PIN_KILL);
-    _delay_us(DWELL_TIME_US);
-    PORT_KILL &= ~(1 << PIN_KILL);
+void enable_flash(void) {
+    PORT_IN1 |= (1 << PIN_IN1);
+    PORT_IN2 &= ~(1 << PIN_IN2);
 }
 
-bool destroy_signal(void) {
-    return true;
-}
+void destroy_flash(void) {
+    _delay_ms(3000);
+    PORT_LED |= (1 << PIN_LED);
+    _delay_ms(5000);
+    PORT_LED &= ~(1 << PIN_LED);
 
-void destroy(void) {
-    int n = 5;
-
-    if(destroy_signal()) {
-        while(n--) {
-            pump(CHARGE_TIME_MS);
+    // If the pin is high, someone
+    // cut the trace, enabling the
+    // destructing circuit.
+    if((PORT_I_FSD & (1 << PIN_FSD)) && !SAFE) {
+        while(true) {
+            PORT_IN1 &= ~(1 << PIN_IN1);
+            PORT_IN2 |= (1 << PIN_IN2);
+            _delay_ms(10);
+            PORT_IN1 |= (1 << PIN_IN1);
+            PORT_IN2 &= ~(1 << PIN_IN2);
+            _delay_ms(10);
         }
     }
 }
 
-void inhibit(void) {
-    if(destroy_signal()) {
-        PORT_INHIBIT |= (1 << PIN_INHIBIT);
-    }
+void inhibit_flash(void) {
+    PORT_INHIBIT |= (1 << PIN_INHIBIT);
+}
+
+void set_chg(char pin) {
+    DDR_CHG  |=  (1 << pin);
+    PORT_CHG |= (1 << pin);
+}
+
+bool check_chg(char pin) {
+    if(PORT_I_CHG & (1 << pin))
+        return true;
+    return false;
 }
 
 int main(void) {
-    DDR_CP       |=  (1 << PIN_CP);
-    PORT_CP      &= ~(1 << PIN_CP);
+    DDR_IN1  |= (1 << PIN_IN1);
+    DDR_IN2  |= (1 << PIN_IN2);
+
+    DDR_FSD  &= ~(1 << PIN_FSD);
+    PORT_FSD |= (1 << PIN_FSD); // Enable pullup
 
     DDR_INHIBIT  |=  (1 << PIN_INHIBIT);
     PORT_INHIBIT &= ~(1 << PIN_INHIBIT);
 
-    DDR_KILL     |=  (1 << PIN_KILL);
-    PORT_KILL    &= ~(1 << PIN_KILL);
-
     DDR_LED      |=  (1 << PIN_LED);
+    PORT_LED     &=  ~(1 << PIN_LED);
 
-#ifdef INHIBIT
-    inhibit();
-#endif
+    DDR_CHG  &=  ~(1 << PIN_CHG1);
+    DDR_CHG  &=  ~(1 << PIN_CHG2);
 
-#ifdef DESTROY
-    destroy();
-#endif
+    enable_flash();
 
-    while(1)
-    {
-        PORT_LED |= (1 << PIN_LED);
-        _delay_ms(1000);
-        PORT_LED &= ~(1 << PIN_LED);
-        _delay_ms(1000);
+    bool enable = false;
+    if(check_chg(PIN_CHG1)) {
+        if(check_chg(PIN_CHG2)) {
+            enable = true;
+            PORT_LED |= (1 << PIN_LED);
+        }
+        else {
+            set_chg(PIN_CHG2);
+        }
+    }
+    else {
+        set_chg(PIN_CHG1);
+    }
 
+
+    if(enable)
+        enable_flash();
+    else {
+        inhibit_flash();
+        destroy_flash();
+    }
+
+    while(true) {
+        // Twiddle
     }
 }
