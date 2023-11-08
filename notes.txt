@@ -1,64 +1,23 @@
 # Notes
-- K9GAG08U0E-SCB0 (Populated flash on V1)
-- K9HDG08U1A-SCB0 (Populated flash on V2)
-- MT29F64G08CBABAWP (Working flash)
-
-Possible Replacements
-     Space
-     ||
-- K9HDG08U5A-SCB0 (4CE, 16GB)
-- K9LCG08U1A-SCB0 (2CE, 8GB)
-- K9GCGD8UOA-SCB0 (1CE, 8GB)
-- K9GCGD8U0M-SCB0 (2CE, 8GB)
-- K9GCGD8U0C-SCB0 (1CE, 8GB)
-- K9GCGD8U0A-SCB0 (2CE, 8GB)
-
-
-
-- SM3257ENQAA (Populated controller on V1)
-- SM3257ENQBA (Populated controller on V2)
-
-# Debugging
-All files in ee/debug_v2/
-All using "Star_SM3257ENAA_M1102"
-
-no-flash.png
-    - New SM3257, no flash populated
-
-old-flash-debug-read-flash-id.png
-old-flash-fail.png
-old-flash.png
-    - All with the old flash memory
-
-# Steps
-    - Started hacking one of the drives connecting different power rails.
-        - Didn't do anything
-    - Populated a V2 board with old flash
-        - Results the exact same as with New flash
-    - Populated a V1 board (blown up one) with Old SM3257
-        - This started working
-        - old-flash-old-SM3257.png
-        - old-flash-old-SM3257-debug.png
-        - Was able to provision normally
-    - Populated a V2 board (16Gb) with old SM3257
-        - This did not work
-    - Used SM3257ENBA_N0528v1 to flash new SM3257, old Flash
-        - This worked!
-
-# Next Steps
-    - Flash isn't getting destroyed
-        - Q2 Rds too high?
-            - Measure voltage above and below the FET
-        - TVS diode in flash
-        -
-
 
 # Boards (V2)
     1) Hacked to try to make flash work. Probably NFG.
     2) Replaced flash to K9GAG08U0E. Removed: Q2 and C1. Not enumerating through dmesg.
     3) Populated with MT29F64G08CBABAWP
         - Works!
-    4-9) Not touched
+    4-7) Not touched
+    8) Poached IC
+    9) Not touched
     10) Sent to Crowdsupply
 
-
+# Boards (V3)
+    1) Replaced IC to SM3257ENQBA. Works! Accidentally wired flash backwards.
+        - Used SM3257ENBA-P0816
+    2) "Bad Block over setting 0X11"
+        - No diodes!
+        - Trying Star_SM3257ENAA_SM3261AB_M0531
+        - Worked (with SM3257ENAA) This IC is okay!
+    3) Not showing up
+        - Different flash (didn't have enough)
+    4) Not showing up - Gets hot
+    5) Worked with Star_SM3257ENAA_SM3261AB_M0531
