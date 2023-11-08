@@ -16,3 +16,5 @@ ee/ovrdrive/ovrdrive-backups/
 *.elf
 *.lck
 
+token_storage.json
+
