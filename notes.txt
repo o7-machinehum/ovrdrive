@@ -1,5 +1,10 @@
 # Notes
 
+# Final TODO
+    - [ ] Extend board for a nicer fit
+    - [ ] Increase charge caps capacitance
+    - [ ] Replace programming port with TC2030
+
 # Boards (V2)
     1) Hacked to try to make flash work. Probably NFG.
     2) Replaced flash to K9GAG08U0E. Removed: Q2 and C1. Not enumerating through dmesg.
@@ -21,3 +26,32 @@
         - Different flash (didn't have enough)
     4) Not showing up - Gets hot
     5) Worked with Star_SM3257ENAA_SM3261AB_M0531
+
+## Parts
+  - ATTINY24A-CCUR  - BGA version
+  - ATTINY24-20PU   - DIP version
+  - K9gag08u0e-Scb0 - NAND Flash
+  - SM3255AA        - What dmesg thinks the chip is
+  - SM3257EN        - Part number on the chip
+  - SM3257ENAA      - Reported by SMI Mass Production Tool
+  - 838-22-004-10-001101
+
+## Notes
+```
+[machinehum@whitebox Star_SM3257ENAA_N0726]$ find . -iname "SM3257ENAA*.FFW"
+./UFD_ALL_ForceFW/SM3257ENAA.FFW
+```
+This is the "ISP" or firmware, source: https://www.usbdev.ru/articles/a_smi/ispcantbefound/
+
+## SMI Mass QC tool
+Settings Password: 320
+Debug Password: 1111
+
+## Links and Notes
+  - [Russian Site 1](https://www.usbdev.ru/articles/testmod/)
+  - [Russian Site 2](https://www.usbdev.ru/files/smi/)
+  - [SMI MP Tool](https://www.usbdev.ru/files/smi/smimptool/)
+  - [Notes on Flash](https://www.elinfor.com/knowledge/practical-guide-for-flash-memory-p-10889)
+  - [SMI MP Tool 2](https://flashboot.ru/files/file/243/)
+  - [ST's Part](https://www.st.com/en/microcontrollers-microprocessors/st72681.html)
+
