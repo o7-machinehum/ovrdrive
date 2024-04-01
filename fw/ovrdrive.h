@@ -28,6 +28,6 @@
 
 /* Full Self Destruct Select */
 #define PIN_FSD     PA3
-#define DDR_FSD     DDRB
+#define DDR_FSD     DDRA
 #define PORT_FSD  	PORTA
 #define PORT_I_FSD  PINA

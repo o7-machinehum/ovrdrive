@@ -6,27 +6,12 @@
 void enable_flash(void) {
     PORT_IN1 |= (1 << PIN_IN1);
     PORT_IN2 &= ~(1 << PIN_IN2);
+    PORT_INHIBIT &= ~(1 << PIN_INHIBIT);
 }
 
 void destroy_flash(void) {
-    _delay_ms(3000);
-    PORT_LED |= (1 << PIN_LED);
-    _delay_ms(5000);
-    PORT_LED &= ~(1 << PIN_LED);
-
-    // If the pin is high, someone
-    // cut the trace, enabling the
-    // destructing circuit.
-    if((PORT_I_FSD & (1 << PIN_FSD)) && !SAFE) {
-        while(true) {
-            PORT_IN1 &= ~(1 << PIN_IN1);
-            PORT_IN2 |= (1 << PIN_IN2);
-            _delay_ms(10);
-            PORT_IN1 |= (1 << PIN_IN1);
-            PORT_IN2 &= ~(1 << PIN_IN2);
-            _delay_ms(10);
-        }
-    }
+    PORT_IN1 &= ~(1 << PIN_IN1);
+    PORT_IN2 |= (1 << PIN_IN2);
 }
 
 void inhibit_flash(void) {
@@ -38,13 +23,24 @@ void set_chg(char pin) {
     PORT_CHG |= (1 << pin);
 }
 
+void clr_chg(void) {
+    DDR_CHG  |=  ~(1 << PIN_CHG1);
+    DDR_CHG  |=  ~(1 << PIN_CHG2);
+    PORT_CHG &= ~(1 << PIN_CHG1);
+    PORT_CHG &= ~(1 << PIN_CHG2);
+}
+
 bool check_chg(char pin) {
-    if(PORT_I_CHG & (1 << pin))
+    if(PORT_I_CHG & (1 << pin)) {
         return true;
+    }
     return false;
 }
 
 int main(void) {
+    bool enable = false;
+    uint8_t flash = 10;
+
     DDR_IN1  |= (1 << PIN_IN1);
     DDR_IN2  |= (1 << PIN_IN2);
 
@@ -54,19 +50,18 @@ int main(void) {
     DDR_INHIBIT  |=  (1 << PIN_INHIBIT);
     PORT_INHIBIT &= ~(1 << PIN_INHIBIT);
 
+    enable_flash();
+
     DDR_LED      |=  (1 << PIN_LED);
     PORT_LED     &=  ~(1 << PIN_LED);
 
     DDR_CHG  &=  ~(1 << PIN_CHG1);
     DDR_CHG  &=  ~(1 << PIN_CHG2);
 
-    enable_flash();
-
-    bool enable = false;
     if(check_chg(PIN_CHG1)) {
         if(check_chg(PIN_CHG2)) {
+            // We have plugged in two times rapidly
             enable = true;
-            PORT_LED |= (1 << PIN_LED);
         }
         else {
             set_chg(PIN_CHG2);
@@ -76,15 +71,29 @@ int main(void) {
         set_chg(PIN_CHG1);
     }
 
-
-    if(enable)
+    // Solid LED indicates normal operation
+    if(enable) {
+        PORT_LED |= (1 << PIN_LED);
         enable_flash();
-    else {
-        inhibit_flash();
-        destroy_flash();
     }
+    else {
+        PORT_LED &= ~(1 << PIN_LED);
+        inhibit_flash();
 
+        if((PORT_I_FSD & (1 << PIN_FSD)) && !SAFE) {
+            while(flash--) {
+                _delay_ms(100);
+                PORT_LED |= (1 << PIN_LED);
+                _delay_ms(100);
+                PORT_LED &= ~(1 << PIN_LED);
+            }
+
+            destroy_flash();
+        }
+    }
+    
     while(true) {
-        // Twiddle
+        _delay_ms(5000);
+        clr_chg();
     }
 }
