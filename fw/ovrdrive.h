@@ -15,19 +15,19 @@
 #define PORT_INHIBIT PORTA
 
 /* LED */
-#define PIN_LED   PA7
-#define DDR_LED   DDRA
-#define PORT_LED  PORTA
+#define PIN_LED PA7
+#define DDR_LED DDRA
+#define PORT_LED PORTA
 
 /* Charge Pins*/
-#define PIN_CHG1   PB0
-#define PIN_CHG2   PB1
-#define DDR_CHG    DDRB
-#define PORT_CHG   PORTB
+#define PIN_CHG1 PB0
+#define PIN_CHG2 PB1
+#define DDR_CHG DDRB
+#define PORT_CHG PORTB
 #define PORT_I_CHG PINB
 
 /* Full Self Destruct Select */
-#define PIN_FSD     PA3
-#define DDR_FSD     DDRA
-#define PORT_FSD  	PORTA
-#define PORT_I_FSD  PINA
+#define PIN_FSD PA3
+#define DDR_FSD DDRA
+#define PORT_FSD PORTA
+#define PORT_I_FSD PINA
