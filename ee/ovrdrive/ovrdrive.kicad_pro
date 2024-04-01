@@ -56,7 +56,21 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "clearance|114956568|109485417|39ab2cde-f3c7-488c-a512-c977800c4ac6|a6ee6553-c1dc-4012-8dfc-610a08fd4e7a",
+        "clearance|114956568|109985417|ad663931-a3dc-48f3-a74b-a4e8c7f08895|a6ee6553-c1dc-4012-8dfc-610a08fd4e7a",
+        "courtyards_overlap|113350001|108500001|699c0251-2a09-498f-9ab5-257377394f75|7f111b25-9fd7-415e-aa81-69dbff483bca",
+        "courtyards_overlap|121869999|107360155|95e2872a-3f1b-4388-a2ac-5ca4f0b07034|d770d4be-cba1-4159-8c31-39b7e513b613",
+        "courtyards_overlap|127800001|107800001|43ae2864-09ab-4487-925b-9c13d1865562|9cc0ccd4-2897-4972-9a40-762440729c24",
+        "items_not_allowed|0|0|42aa71e3-435d-47a5-b665-b394c1691be1|00000000-0000-0000-0000-000000000000",
+        "items_not_allowed|0|0|c2de6971-89b0-42d2-b779-568633fe7390|00000000-0000-0000-0000-000000000000",
+        "items_not_allowed|0|0|ce8c6e33-9d68-4f86-9bc4-6f93cf99e7f4|00000000-0000-0000-0000-000000000000",
+        "items_not_allowed|111859043|106772225|bc972538-de8f-46a6-9ef7-da2edf47d856|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|125800000|104200000|9cc0ccd4-2897-4972-9a40-762440729c24|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|149000000|104200000|6ce55124-913a-49b2-9312-52c8487c58b0|00000000-0000-0000-0000-000000000000",
+        "silk_edge_clearance|144434463|110345000|aef7c915-67a3-4e5e-9d5c-9cc889dee81a|c35617af-48dd-45b0-8e8e-03fadccc1d1a",
+        "silk_edge_clearance|144434463|98055000|aef7c915-67a3-4e5e-9d5c-9cc889dee81a|2e12ae32-fc14-48d8-a1da-b6c3a0c0c870"
+      ],
       "meta": {
         "version": 2
       },
@@ -491,7 +505,7 @@
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
-    "plot_directory": "../../../cs-overdrive/images/",
+    "plot_directory": "out/R0.42/",
     "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
