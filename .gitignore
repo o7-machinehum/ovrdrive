@@ -5,6 +5,7 @@ ovrdrive.elf
 ovrdrive.hex
 fw/cscope.out
 ee/ovrdrive/ovrdrive-backups/
+media/
 
 *.aux
 *.log
