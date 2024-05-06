@@ -1,0 +1,10 @@
+ _____           ______      _           
+|  _  |          |  _  \    (_)       CE
+| | | |_   ___ __| | | |_ __ ___   _____ 
+| | | \ \ / / '__| | | | '__| \ \ / / _ \
+\ \_/ /\ V /| |  | |/ /| |  | |\ V /  __/
+ \___/  \_/ |_|  |___/ |_|  |_| \_/ \___|
+
+Hey! Thanks for purchasing Ovrdrive; community support makes 100% open-source hardware possible.
+
+Please see the wiki/github for more for info: https://github.com/o7-machinehum/ovrdrive/wiki
