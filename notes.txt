@@ -27,6 +27,11 @@
     4) Not showing up - Gets hot
     5) Worked with Star_SM3257ENAA_SM3261AB_M0531
 
+# Boards (V4)
+    - ** Important ** : Make sure Virtualbox USB is set to USB 1.1
+    - Used SM3257ENBA-P0816
+        - Previsioned all 20, no visible errors.
+
 ## Parts
   - ATTINY24A-CCUR  - BGA version
   - ATTINY24-20PU   - DIP version

@@ -14,7 +14,6 @@ Via process : Tenting vias
 Finished copper : 1 oz Cu (Inner Copper:1 oz)
 Remove product No. : Yes
 
-Update From R0.41
+Update From R0.42
 ----------------
-1) Changed board outline to fit in enclosure better
-2) Rotated TC2030
+1) 0402 resistor change to 0603

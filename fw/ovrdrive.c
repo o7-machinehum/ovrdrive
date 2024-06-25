@@ -98,7 +98,7 @@ int main(void)
     }
 
     while (true) {
-        _delay_ms(5000);
+        _delay_ms(1000);
         clr_chg();
     }
 }
