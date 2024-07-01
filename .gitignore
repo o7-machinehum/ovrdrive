@@ -16,6 +16,7 @@ media/
 *.hex
 *.elf
 *.lck
+*.pdf
 
 token_storage.json
 

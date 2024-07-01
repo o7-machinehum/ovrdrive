@@ -9,6 +9,9 @@ TARGET = ovrdrive
 # List of C source files and object files
 SRC =	$(TARGET).c
 
+# Release Build
+RELEASE = rel/ovrdrive_r1.elf
+
 # Executable names
 COMPILER = avr-gcc
 COPY = avr-objcopy
@@ -45,7 +48,11 @@ fuse:
 	# -avrdude -p $(MCU_TARGET) -c $(DFU) -U lfuse:w:0xa4:m -U hfuse:w:0xd8:m
 	-avrdude -p $(MCU_TARGET) -c $(DFU) -U lfuse:w:0xe2:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m
 
-deploy: fuse flash
+deploy: fuse 
+	@echo =====Programming Board =====
+	avrdude -p $(MCU_TARGET) -c $(DFU) -e -U flash:w:$(RELEASE)
+	@echo =====Programming Done=====
+
 
 clean:
 	@echo =====Cleaning=====
