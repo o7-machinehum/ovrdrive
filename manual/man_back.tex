@@ -1,0 +1,41 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{tikz}
+\pagestyle{empty}
+
+\begin{document}\scriptsize	
+\noindent
+\begin{tikzpicture}[remember picture,overlay, shift={(current page.south west)}]
+
+% Define the height and width of each strip
+\def\stripwidth{8.5in}
+\def\stripheight{1in}
+\def\segmentwidth{\stripwidth/3}
+
+\def\entext{Handle with care, avoid extreme temperatures, moisture, and direct sunlight. To activate, plug in the flash drive rapidly five times; otherwise, it will appear broken. Keep out of reach of children. Dispose of properly per electronic waste regulations. The manufacturer is not liable for data loss.}
+
+\def\frtext{Manipuler avec soin, éviter les températures extrêmes, l’humidité et la lumière directe du soleil. Pour activer, brancher rapidement cinq fois; sinon, il apparaîtra cassé. Garder hors de portée des enfants. Éliminez correctement selon les réglementations sur les déchets électroniques. Le fabricant n'est pas responsable des pertes de données.}
+
+\def\detext{Vorsichtig behandeln, nicht extremen Temperaturen, Feuchtigkeit oder direktem Sonnenlicht aussetzen. Zur Aktivierung das Flash-Laufwerk schnell fünfmal einstecken, sonst erscheint es als defekt. Von Kindern fernhalten. Ordentlich gemäß den Vorschriften für Elektronikabfall entsorgen. Der Hersteller haftet nicht für Datenverluste.}
+
+% Loop to create 11 strips
+\foreach \i in {0,1,...,11}{
+  \begin{scope}[shift={(0in,\i*\stripheight)}]
+    % Draw strip
+    \draw (0,0) rectangle (\stripwidth,\stripheight);
+
+    % Draw segments within strip
+    \foreach \j in {1,2}{
+      \draw (\j*\segmentwidth,0) -- (\j*\segmentwidth,\stripheight);
+    }
+
+    % Add text to each segment
+    \node[anchor=center, text width=\segmentwidth, align=center] at (0.5*\segmentwidth, 0.5*\stripheight) {\entext};
+    \node[anchor=center, text width=\segmentwidth, align=center] at (1.5*\segmentwidth, 0.5*\stripheight) {\frtext};
+    \node[anchor=center, text width=\segmentwidth, align=center] at (2.5*\segmentwidth, 0.5*\stripheight) {\detext};
+  \end{scope}
+}
+
+\end{tikzpicture}
+
+\end{document}

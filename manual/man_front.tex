@@ -1,0 +1,41 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{tikz}
+\pagestyle{empty}
+\usepackage{graphicx}
+
+\begin{document}
+\noindent
+\begin{tikzpicture}[remember picture,overlay, shift={(current page.south west)}]
+
+% Define the height and width of each strip
+\def\stripwidth{8.5in}
+\def\stripheight{1in}
+\def\segmentwidth{\stripwidth/3}
+
+% Loop to create 11 strips
+\foreach \i in {0,1,...,11}{
+  \begin{scope}[shift={(0in,\i*\stripheight)}]
+    % Draw strip
+    \draw (0,0) rectangle (\stripwidth,\stripheight);
+
+    % Draw segments within strip
+    \foreach \j in {1,2}{
+      \draw (\j*\segmentwidth,0) -- (\j*\segmentwidth,\stripheight);
+    }
+
+    % Add text to each segment
+
+    \node[anchor=center, text width=\segmentwidth, align=center] at (0.5*\segmentwidth, 0.5*\stripheight) {};
+    \node[anchor=center, text width=\segmentwidth, align=center] at (1.5*\segmentwidth, 0.5*\stripheight) {
+        \huge{OVRDRIVE}\\[0.2em]
+        \includegraphics[width=0.1\dimexpr\segmentwidth]{ce.png} \hspace{0.2em}
+        \includegraphics[width=0.1\dimexpr\segmentwidth]{WEEE.png}
+    };
+    \node[anchor=center, text width=\segmentwidth, align=center] at (2.5*\segmentwidth, 0.5*\stripheight) {};
+  \end{scope}
+}
+
+\end{tikzpicture}
+
+\end{document}
