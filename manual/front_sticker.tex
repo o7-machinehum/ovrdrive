@@ -19,12 +19,15 @@
 
     % Loop to create 3 segments
     \foreach \j in {0,1,2}{
-      \node[anchor=center, text width=\stripheight, align=center, rotate=90] at (\j*\segmentwidth + 0.5*\segmentwidth, 0.5*\stripheight) {
+      \node[anchor=center, text width=\stripheight, align=center] at (\j*\segmentwidth + 0.5*\segmentwidth, 0.5*\stripheight) {
+        {\LARGE{\texttt{OVRDRIVE-USB-01}}}\\[0.2em]
         {OVRDRIVE}\\[0.2em]
-        \includegraphics[width=0.2\dimexpr\stripheight]{ce.png} \hspace{0.2em}
-        \includegraphics[width=0.2\dimexpr\stripheight]{WEEE.png}\\[0.2em]
-        \includegraphics[width=0.9\dimexpr\stripheight]{qr-code.png} \hspace{0.2em}\\[0.2em]
-        \small{Thanks for supporting open source hardware.}
+        {QTD: 1}\\[0.2em]
+        {Interrupt Labs}\\[0.2em]
+        % \includegraphics[width=0.2\dimexpr\stripheight]{ce.png} \hspace{0.2em}
+        % \includegraphics[width=0.2\dimexpr\stripheight]{WEEE.png}\\[0.2em]
+        % \includegraphics[width=0.9\dimexpr\stripheight]{qr-code.png} \hspace{0.2em}\\[0.2em]
+        % \small{Thanks for supporting open source hardware.}
 
       };
     }
