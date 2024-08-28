@@ -1,5 +1,5 @@
 # Overdrive Firmware
-The firmware is just one source file and a header `ovrdrive.c` and `ovrdrive.h`. The hardware is an ATmega25 programmed from a TC2030 programming pad (J3). I have tested that it's also possible to use a 1mm pitch, 2x3 header by just holding it down to the pads for a quick and dirty program.
+The firmware consists of just one source file and a header `ovrdrive.c` and `ovrdrive.h`. The hardware is an ATmega25 programmed from a TC2030 programming pad (J3). I have tested that it's possible to use a 1mm pitch, 2x3 header by just holding it down to the pads for a quick and dirty program.
 
 ## Software Requirements
 ```
