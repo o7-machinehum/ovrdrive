@@ -12,6 +12,7 @@ I've added quite a bit of git lfs content, I will eventually remove all this, bu
 ## Content
  - [Blog Post](https://interruptlabs.ca/2022/07/29/I-m-Building-a-Self-Destructing-USB-Drive/)
  - [YouTube Content](https://youtu.be/Wrcy6ySjSu8)
+ - [Buy in my Shop](https://shop.rootkitlabs.com/products/ovrdrive-usb)
 
 
 ## Firmware
